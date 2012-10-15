@@ -13,7 +13,7 @@ Feedback, improvements, and pull requests are welcome. Please get in touch if yo
 
 ```obj-c
     //1: Create a PocketSVG object from your SVG file:
-    PocketSVG *myVectorDrawing = [[PocketSVG alloc] initFromSVGFileNamed:@"BezierCurve1-iPad"];
+    PocketSVG *myVectorDrawing = [[PocketSVG alloc] initFromSVGFileNamed:@"BezierCurve3"];
     
     //2: Its bezier property is the corresponding UIBezierPath:
     UIBezierPath *myBezierPath = myVectorDrawing.bezier;
@@ -44,13 +44,14 @@ Don't forget to add the __QuartzCore__ framework to your project ([here's how](h
 * [Drawing Shapes Using Bezier Paths](http://developer.apple.com/library/ios/#documentation/2ddrawing/conceptual/drawingprintingios/BezierPaths/BezierPaths.html) - From Apple's Drawing and Printing Guide for iOS
 
 ## Latest Fixes
+* Enhanced support for NSBezierPaths (thanks to [mcianni](https://github.com/mcianni)).
 * Fixed problem that causes SVGs to render with wrong frame dimensions.
 * Fixed problem that causes some SVGs to render incorrectly.
 * Fixed parse bug for SVGs with blank spaces in them (thanks to [mindbrix](https://github.com/mindbrix)).
 * Simplified PocketSVG's init method (thanks to [johnnyknox](https://github.com/johnnyknox)).
 
 ## To Do
-* Generate NSBezierPaths as well as UIBezierPaths
+* Full support for NSBezierPaths as well as UIBezierPaths (work in progress on develop branch)
 * Make it a category on CAShapeLayer?
 
 ## Support 
